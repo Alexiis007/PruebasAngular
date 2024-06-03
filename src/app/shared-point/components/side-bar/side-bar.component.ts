@@ -18,5 +18,10 @@ export class SideBarComponent {
       label:'Rick & Morty',
       icon:'pi-star'
     },
+    {
+      routerLink:'/calculadora',
+      label:'Calculadora',
+      icon:'pi-star'
+    },
   ]
 }

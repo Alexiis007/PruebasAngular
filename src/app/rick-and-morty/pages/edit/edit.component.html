@@ -1,0 +1,81 @@
+<div style="text-align: center; margin: 10px;">
+    <p-button routerLink="/rickAndMorty/characters" label="Regresar" [rounded]="true" />
+</div>
+<div class="flex flex-column md:flex-row">
+    <div style="margin-left: 10px; margin-right: 50px;">
+        <rick-and-morty-component-card [especie]="data.species" [estatus]="data.status" [genero]="data.gender"
+            [imagen]="data.image" [titulo]="data.name" [id]="data.id" />
+    </div>
+    <div style="margin-right: 10px; width: 100%;">
+        <form [formGroup]="formEdit" class="flex flex-column">
+            <!-- nombre -->
+            <div style="margin: 10px;">
+                <label class="col-sm-3 col-form-label">Nombre</label>
+                <div>
+                    <input type="text" formControlName="nombre">
+                </div>
+            </div>
+            <!-- genero -->
+            <div style="margin: 10px;">
+                <label class="col-sm-3 col-form-label">Género</label>
+                <div>
+                    <!-- Radio 1 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="Male" id="radioMasculino"
+                            formControlName="genero">
+                        <label class="form-check-label" for="radioMasculino">
+                            Masculino
+                        </label>
+                    </div>
+                    <!-- Radio 2 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="Female" id="radioFemenino"
+                            formControlName="genero">
+                        <label class="form-check-label" for="radioFemenino">
+                            Femenino
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 10px;">
+                <label class="col-sm-3 col-form-label">Raza</label>
+                <!-- Radio 1 -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Human" id="radioHuman"
+                        formControlName="raza">
+                    <label class="form-check-label" for="radioHuman">
+                        Humano
+                    </label>
+                </div>
+                <!-- Radio 2 -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Alien" id="radioAlien"
+                        formControlName="raza">
+                    <label class="form-check-label" for="radioAlien">
+                        Alien
+                    </label>
+                </div>
+            </div>
+            <div style="margin: 10px;">
+                <label class="col-sm-3 col-form-label">Estado</label>
+                <!-- Radio 1 -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Alive" id="radioVivo"
+                        formControlName="estatus">
+                    <label class="form-check-label" for="radioVivo">
+                        Sigue Vivo
+                    </label>
+                </div>
+                <!-- Radio 2 -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Dead" id="radioMuerto"
+                        formControlName="estatus">
+                    <label class="form-check-label" for="radioMuerto">
+                        Ya se murio
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <pre>{{formEdit.value | json}}</pre>
+</div>

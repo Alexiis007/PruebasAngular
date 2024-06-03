@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./pokedex/pokedex.module').then(m => m.PokedexModule)
   },  
   {
+    path: 'calculadora', 
+    loadChildren: () => import('./calculadora/calculadora.module').then(m => m.CalculadoraModule)
+  },  
+  {
     path:'',
     redirectTo:'rickAndMorty', 
     pathMatch: 'full'
