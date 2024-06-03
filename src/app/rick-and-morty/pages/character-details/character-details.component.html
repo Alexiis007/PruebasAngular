@@ -1,0 +1,32 @@
+<div style="text-align: center; margin: 10px;">
+    <p-button routerLink="/rickAndMorty/characters" label="Regresar" [rounded]="true" />
+</div>
+<div class="flex flex-column md:flex-row">
+    <div style="margin-left: 10px; margin-right: 50px;">
+        <rick-and-morty-component-card 
+        [especie]="data.species"
+        [estatus]="data.status" 
+        [genero]="data.gender" 
+        [imagen]="data.image" 
+        [titulo]="data.name"
+        [id]="data.id"
+    />
+    </div>
+    <div style="margin-right: 10px; width: 100%;">
+        <div class="card">
+            <p-scrollPanel [style]="{ width: '100%', height: '450px' }" styleClass="custombar1">
+                <h1>Fecha de creacion</h1>
+                <hr>
+                <p>Fecha de creacion: {{data.created | date:'long'}}</p>
+                <h1>Origen</h1>
+                <hr>
+                <p>Origen: {{data.origin.name | uppercase | traduccion}}</p>
+                <h1>Episodios Del Personaje</h1>
+                <hr>
+                @for (i of data.episode; track $index) {
+                    <p>Episodios : <a [href]="i">{{i}}</a></p>
+                }
+            </p-scrollPanel>
+        </div>
+    </div>
+</div>

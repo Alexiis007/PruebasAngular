@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'rick-and-morty-component-card',
@@ -7,13 +8,17 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input()
-  titulo !: string;
+  titulo : string = '';
   @Input()
-  imagen !: string;
+  imagen : string = '';
   @Input()
-  especie !: string;
+  especie : string = '' ;
   @Input()
-  genero !: string;
+  genero : string = '';
   @Input()
-  estatus !: string;
+  estatus : string = '';
+  @Input()
+  id !: number;
+
+  public router = inject(Router)
 }
