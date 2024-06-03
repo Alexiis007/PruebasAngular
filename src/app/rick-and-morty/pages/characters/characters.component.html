@@ -1,0 +1,11 @@
+<p-button (click)="next(prevUrl)" label="<= Prev Page" [rounded]="true" />
+<p-button (click)="next(nextUrl)" label="Next Page =>" [rounded]="true" />
+<div class="grid">
+    @for (character of data; track $index) {
+        <div class="col" style="margin: 10px;">
+            <rick-and-morty-component-card [especie]="character.species" [estatus]="character.status" [genero]="character.gender" [imagen]="character.image" [titulo]="character.name"/>
+        </div>
+    }
+</div>
+<p-button (click)="next(prevUrl)" label="<= Prev Page" [rounded]="true" />
+<p-button (click)="next(nextUrl)" label="Next Page =>" [rounded]="true" />
