@@ -1,0 +1,18 @@
+<div>
+    <div style="margin-bottom: 20px; margin-top: 10px;">
+        <form [formGroup]="form">
+            <p-inputGroup>
+                <input formControlName="search" type="text" pInputText placeholder="Nombre Pokemon:" />
+                <button type="button" (click)="buscar()" pButton icon="pi pi-search" class="p-button-warning"></button>
+            </p-inputGroup>
+        </form>
+    </div>
+    @if (!data) {
+        <h1 style="text-align: center; margin-top: 180px;">{{messageAlert}}</h1>
+    }
+    @else {
+        <div>
+            <pokedex-component-card [data]="data"/>
+        </div>
+    }
+</div>

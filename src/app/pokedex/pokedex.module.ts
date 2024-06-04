@@ -7,19 +7,23 @@ import { CardComponent } from './components/card/card.component';
 import { PrimeNgModule } from '../PrimeNg/prime-ng/prime-ng.module';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { SharedPointModule } from '../shared-point/shared-point.module';
+import { PokemonByNameComponent } from './pages/pokemon-by-name/pokemon-by-name.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AllPokomonsComponent,
     CardComponent,
-    LayoutPageComponent
+    LayoutPageComponent,
+    PokemonByNameComponent
   ],
   imports: [
     CommonModule,
     PokedexRoutingModule,
     PrimeNgModule,
-    SharedPointModule
+    SharedPointModule,
+    ReactiveFormsModule,
   ]
 })
 export class PokedexModule { }

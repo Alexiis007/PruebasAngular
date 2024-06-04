@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DataPokemon } from '../../interfaces/DataPokemon.interface';
+import { PokemonData } from '../../interfaces/PokemonData.interface';
 
 @Component({
   selector: 'pokedex-component-card',
@@ -8,6 +8,5 @@ import { DataPokemon } from '../../interfaces/DataPokemon.interface';
 })
 export class CardComponent {
   @Input()
-  data ?: string;
-  
+  data ?: PokemonData;
 }

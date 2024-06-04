@@ -1,11 +1,4 @@
 import {
-  RouterLink,
-  RouterLinkActive,
-  RouterModule
-} from "./chunk-JLAMALRC.js";
-import "./chunk-CC3NMCQN.js";
-import "./chunk-KHEYWSLQ.js";
-import {
   BaseIcon,
   Ripple,
   RippleModule
@@ -14,6 +7,13 @@ import {
   ConnectedOverlayScrollHandler,
   DomHandler
 } from "./chunk-TKJMWDM5.js";
+import {
+  RouterLink,
+  RouterLinkActive,
+  RouterModule
+} from "./chunk-JLAMALRC.js";
+import "./chunk-CC3NMCQN.js";
+import "./chunk-KHEYWSLQ.js";
 import {
   CommonModule,
   DOCUMENT,

@@ -1,17 +1,15 @@
 <div class="card flex justify-content-center">
-    <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }">
+    <p-card [header]="data?.name" [style]="{ width: '360px' }" class="tarjeta">
         <ng-template pTemplate="header">
-            <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+            <img [alt]="data?.name" [src]="data?.sprites?.front_default" />
         </ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
-        <ng-template pTemplate="footer">
-            <div class="flex gap-3 mt-1">
-                <p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
-                <p-button label="Save" class="w-full" styleClass="w-full" />
-            </div>
-        </ng-template>
+        <ul>
+            <li>Experiencia Base: {{data?.base_experience}}</li>
+            <li>Altura: {{data?.height}}</li>
+            <li>Formas:</li>
+            <ul *ngFor="let item of data?.forms; let i = index">
+                <li>Forma No.{{i+1}}: {{item.name}}</li>
+            </ul>
+        </ul>
     </p-card>
 </div>
