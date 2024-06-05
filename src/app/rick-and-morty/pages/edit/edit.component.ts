@@ -1,6 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { Subscription, switchMap } from 'rxjs';
 import { Result } from '../../interfaces/characters.interface';
 import { RickAndMortyService } from '../../services/rick-and-morty.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.css'
 })
-export class EditComponent implements OnInit{
+export class EditComponent implements OnInit, OnDestroy{
   private RickMortySv = inject(RickAndMortyService); 
   private activateRout = inject(ActivatedRoute) 
   private fb = inject(FormBuilder)
@@ -24,10 +24,11 @@ export class EditComponent implements OnInit{
   )
 
   public data !: Result;
-
+  
+  private characterById ?: Subscription;
   
   ngOnInit(): void {
-    this.activateRout.params
+    this.characterById = this.activateRout.params
     .pipe(
       switchMap(({id}) => this.RickMortySv.characterById(id))
     )
@@ -35,8 +36,9 @@ export class EditComponent implements OnInit{
       res =>  {
         this.data = res;
         this.formEdit.reset({'nombre':res.name, 'genero':res.gender, 'estatus':res.status, 'raza':res.species})
-      }
-      )
-
+    })
+  }
+  ngOnDestroy(): void {
+    this.characterById?.unsubscribe()
   }
 }

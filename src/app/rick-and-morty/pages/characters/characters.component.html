@@ -1,6 +1,6 @@
 <div style="text-align: center;">
-    <p-button (click)="next(prevUrl)" label="<= Prev Page" [rounded]="true" />
-    <p-button (click)="next(nextUrl)" label="Next Page =>" [rounded]="true" />
+    <p-button (click)="pagination(prevUrl)" label="<= Prev Page" [rounded]="true" />
+    <p-button (click)="pagination(nextUrl)" label="Next Page =>" [rounded]="true" />
 </div>
 <div class="grid">
     @for (character of data; track $index) {
@@ -16,6 +16,6 @@
     }
 </div>
 <div style="text-align: center;">
-    <p-button (click)="next(prevUrl)" label="<= Prev Page" [rounded]="true" />
-    <p-button (click)="next(nextUrl)" label="Next Page =>" [rounded]="true" />
+    <p-button (click)="pagination(prevUrl)" label="<= Prev Page" [rounded]="true" />
+    <p-button (click)="pagination(nextUrl)" label="Next Page =>" [rounded]="true" />
 </div>
