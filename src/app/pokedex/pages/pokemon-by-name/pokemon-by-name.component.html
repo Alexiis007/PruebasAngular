@@ -15,4 +15,15 @@
             <pokedex-component-card [data]="data"/>
         </div>
     }
+    <div style="padding: 10px;">
+        <button 
+            *ngIf="data"  
+            (click)="resetearMemoria()"
+            pButton 
+            pRipple 
+            label="Resetear memoria LocalStorage" 
+            class="p-button-success"
+            style="margin: 20px auto; width: 100%;">
+        </button>
+    </div>
 </div>

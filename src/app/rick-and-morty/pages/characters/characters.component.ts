@@ -20,9 +20,13 @@ export class CharactersComponent implements OnInit, OnDestroy{
     if(url == null) return;
     this.charactersNext = this.RickMortySv.charactersNext(url).subscribe(
       res => {
-        this.data = res.results;
-        this.nextUrl = res.info.next; 
-        this.prevUrl = res.info.prev; }
+        next:{
+          this.data = res.results;
+          this.nextUrl = res.info.next; 
+          this.prevUrl = res.info.prev; }
+        error:()=>{console.log('error ');
+        }
+      }
     )
   }
   ngOnInit(): void {

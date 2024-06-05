@@ -38,6 +38,11 @@ export class PokemonByNameComponent implements OnDestroy, OnInit{
     })
   }
 
+  public resetearMemoria():void{
+    localStorage.removeItem('pokemon');
+    this.data = undefined;
+  }
+
   ngOnDestroy(): void {
     //se cierra la subscripcion
     this.pokemonDataByName?.unsubscribe()
