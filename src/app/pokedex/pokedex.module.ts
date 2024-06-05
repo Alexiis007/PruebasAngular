@@ -9,6 +9,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { SharedPointModule } from '../shared-point/shared-point.module';
 import { PokemonByNameComponent } from './pages/pokemon-by-name/pokemon-by-name.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ValidacionesDirective } from './directives/validaciones.directive';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AllPokomonsComponent,
     CardComponent,
     LayoutPageComponent,
-    PokemonByNameComponent
+    PokemonByNameComponent,
+    ValidacionesDirective
   ],
   imports: [
     CommonModule,

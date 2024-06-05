@@ -1,35 +1,42 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PokedexService } from '../../services/pokedex.service';
 import { PokemonData } from '../../interfaces/PokemonData.interface';
-import { LowerCasePipe } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   templateUrl: './pokemon-by-name.component.html',
   styleUrl: './pokemon-by-name.component.css'
 })
-export class PokemonByNameComponent {
+export class PokemonByNameComponent{
   private fb = inject(FormBuilder);
   private SvPokedex = inject(PokedexService);
 
   public data ?: PokemonData;
-  
-  public messageAlert : string = "Busca Un Pokemon Por su nombre..."
 
   public form : FormGroup = this.fb.group(
     { search:['',[Validators.required]] }
   );
 
   public buscar(){
-    if(!this.form.get('search')?.value.trim())
-    {
-      this.messageAlert = "Antes de buscar escribe el nombre del pokemon"
-      return
-    }
+    this.form.markAsTouched();
+    //Se verifica que no existan errores en el input de busqueda
+    if(this.form.valid == false) {return}
+    //Si no existieron errores continuamos con la peticion
     this.SvPokedex.pokemonDataByName(this.form.get('search')?.value.toLowerCase())
     .subscribe({
       next:(res => {this.data = res; }),
-      error:(()=> this.messageAlert="Lo siento no pudimos encontrar ese pokemon, trata de ingresarlo sin acentos")
+      error:(()=> {
+        Swal.fire({
+          icon: "error",
+          title: "Parese que algo no salio bien 😢",
+          text: "Trata de escribir bien el nombre del pokemon y sin acentos!",
+        });
+      })
     })
   }
+  ngOnDestroy(): void {
+
+  }
+
 }

@@ -8,7 +8,7 @@
         </form>
     </div>
     @if (!data) {
-        <h1 style="text-align: center; margin-top: 180px;">{{messageAlert}}</h1>
+        <h1 [Touched]="form.touched" [Errores]="form.get('search')?.errors" PokedexValidaciones style="text-align: center; margin-top: 140px;"></h1>
     }
     @else {
         <div>

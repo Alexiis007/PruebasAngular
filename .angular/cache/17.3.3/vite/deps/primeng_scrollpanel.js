@@ -8,11 +8,11 @@ import {
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-HFOQLTAW.js";
+} from "./chunk-ZHMNIDXZ.js";
 import {
   PrimeTemplate,
   UniqueComponentId
-} from "./chunk-IE2J2T2O.js";
+} from "./chunk-SGMIGU25.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -53,8 +53,9 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-4FFVUQGS.js";
-import "./chunk-SXIXOCJ4.js";
+} from "./chunk-QDVZZE26.js";
+import "./chunk-WSA2QMXP.js";
+import "./chunk-WKYGNSYM.js";
 
 // node_modules/primeng/fesm2022/primeng-scrollpanel.mjs
 var _c0 = ["container"];
