@@ -1,7 +1,10 @@
+<div *ngIf="flag == false" style="text-align: center; margin-top: 50px;">
+    <p-progressSpinner ariaLabel="loading" />
+</div>
 <div class="card flex justify-content-center">
     <p-card [header]="[' No. ']+id.toString()+[' ']+titulo" subheader="" [style]="{ width: '360px'}" class="p-card">
         <ng-template pTemplate="header">
-            <img [alt]="imagen" [src]="imagen" />
+            <img [alt]="imagen" [src]="imagen" (load)="flag=true"/>
         </ng-template>
         <ul style="font-size: 20px;">
             <li>{{estatus | uppercase | traduccion}}</li>

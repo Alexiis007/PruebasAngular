@@ -20,5 +20,7 @@ export class CardComponent {
   @Input()
   id !: number;
 
+  flag = false;
+
   public router = inject(Router)
 }

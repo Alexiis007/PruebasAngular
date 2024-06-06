@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class CharactersComponent implements OnInit, OnDestroy{
   private RickMortySv = inject(RickAndMortyService);
+
   public data !: Result[];
   public nextUrl !: string | null;
   public prevUrl !: string | null;

@@ -10,6 +10,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -26,7 +27,8 @@ import { RippleModule } from 'primeng/ripple';
     InputGroupAddonModule,
     InputTextModule,
     ToastModule,
-    RippleModule
+    RippleModule,
+    ProgressSpinnerModule,
   ]
 })
 export class PrimeNgModule { }
