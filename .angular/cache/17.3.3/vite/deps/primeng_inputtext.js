@@ -2,11 +2,11 @@ import {
   NgModel
 } from "./chunk-OMLD7PIP.js";
 import {
-  CommonModule
-} from "./chunk-ZHMNIDXZ.js";
-import {
   PrimeNGConfig
 } from "./chunk-SGMIGU25.js";
+import {
+  CommonModule
+} from "./chunk-ZHMNIDXZ.js";
 import {
   ChangeDetectorRef,
   Directive,

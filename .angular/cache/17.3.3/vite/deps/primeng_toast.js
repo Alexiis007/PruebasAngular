@@ -4,19 +4,10 @@ import {
 import {
   Ripple,
   RippleModule
-} from "./chunk-NFZ3ALFF.js";
+} from "./chunk-DMJDBZSC.js";
 import {
   DomHandler
 } from "./chunk-TKJMWDM5.js";
-import {
-  CommonModule,
-  DOCUMENT,
-  NgClass,
-  NgForOf,
-  NgIf,
-  NgStyle,
-  NgTemplateOutlet
-} from "./chunk-ZHMNIDXZ.js";
 import {
   MessageService,
   ObjectUtils,
@@ -26,6 +17,15 @@ import {
   UniqueComponentId,
   zindexutils
 } from "./chunk-SGMIGU25.js";
+import {
+  CommonModule,
+  DOCUMENT,
+  NgClass,
+  NgForOf,
+  NgIf,
+  NgStyle,
+  NgTemplateOutlet
+} from "./chunk-ZHMNIDXZ.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,

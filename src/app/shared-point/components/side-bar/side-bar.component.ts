@@ -11,17 +11,17 @@ export class SideBarComponent {
     {
       routerLink:'/pokedex',
       label:'Pokedex',
-      icon:'pi-star'
+      icon:'pi pi-star'
     },
     {
       routerLink:'/rickAndMorty',
       label:'Rick & Morty',
-      icon:'pi-star'
+      icon:'pi pi-star'
     },
     {
       routerLink:'/calculadora',
       label:'Calculadora',
-      icon:'pi-star'
+      icon:'pi pi-star'
     },
   ]
 }

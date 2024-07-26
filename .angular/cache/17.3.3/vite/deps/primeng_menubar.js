@@ -4,18 +4,26 @@ import {
   RouterModule
 } from "./chunk-UXIRVJRV.js";
 import "./chunk-4H2GOX5C.js";
-import "./chunk-JTLU3WCK.js";
 import {
   BaseIcon
 } from "./chunk-WAQJZLZV.js";
 import {
   Ripple,
   RippleModule
-} from "./chunk-NFZ3ALFF.js";
+} from "./chunk-DMJDBZSC.js";
 import {
   ConnectedOverlayScrollHandler,
   DomHandler
 } from "./chunk-TKJMWDM5.js";
+import "./chunk-JTLU3WCK.js";
+import {
+  ObjectUtils,
+  PrimeNGConfig,
+  PrimeTemplate,
+  SharedModule,
+  UniqueComponentId,
+  zindexutils
+} from "./chunk-SGMIGU25.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -26,14 +34,6 @@ import {
   NgTemplateOutlet,
   isPlatformBrowser
 } from "./chunk-ZHMNIDXZ.js";
-import {
-  ObjectUtils,
-  PrimeNGConfig,
-  PrimeTemplate,
-  SharedModule,
-  UniqueComponentId,
-  zindexutils
-} from "./chunk-SGMIGU25.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
